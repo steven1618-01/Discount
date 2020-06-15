@@ -10,17 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     @IBOutlet weak var TextField: UITextField!
     @IBOutlet weak var Per: UILabel!
     @IBOutlet weak var Count: UILabel!
     @IBOutlet weak var PER: UILabel!
     
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
     
     @IBAction func after_entry_the_number(_ sender: Any) {
         
