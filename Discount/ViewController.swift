@@ -20,8 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var Per: UILabel!
     @IBOutlet weak var Count: UILabel!
     @IBOutlet weak var PER: UILabel!
-    @IBAction func afterentrythenumber(_ sender: Any) {
-        Per.text = TextField.text
+    
+    
+    @IBAction func after_entry_the_number(_ sender: Any) {
+        
     }
     
 }
