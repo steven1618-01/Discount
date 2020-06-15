@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var PER: UILabel!
     @IBOutlet weak var 金額: UILabel!
     
+    var money = 0
+    var persent = 0
     
     override func viewDidLoad() {
         
@@ -27,11 +29,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func persent_slider(_ sender: UISlider) {
-        PER.text = Int(sender.value).description
+        PER.text = Int(sender.value).description+"%"
+        var persent1 = Int(sender.value).description
+        persent = 100-Int(persent1)!
+        Count.text = String(dicount(money: money, persent: persent))
     }
     
     @IBAction func money1(_ sender: Any) {
         金額.text = TextField.text
+        var money1 = Int(TextField.text!)!
+        money = money1
+        Count.text = String(dicount(money: money, persent: persent))
+        
+        
     }
     
     //Dicount function
