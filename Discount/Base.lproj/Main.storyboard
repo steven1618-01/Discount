@@ -22,7 +22,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
-                                    <action selector="after_entry_the_number:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="i0l-rv-Tu3"/>
+                                    <action selector="money1:" destination="BYZ-38-t0r" eventType="editingChanged" id="w4b-LC-BQ3"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="打折" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE2-f3-Bf4">
@@ -46,8 +46,8 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaN-xa-P3a">
-                                <rect key="frame" x="233" y="363" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="０" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaN-xa-P3a">
+                                <rect key="frame" x="233" y="363" width="18" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -56,6 +56,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1Fa-Wi-Sad">
                                 <rect key="frame" x="41" y="434" width="294" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="persent_slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="OnE-KO-RYq"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -64,8 +67,8 @@
                     <connections>
                         <outlet property="Count" destination="qaN-xa-P3a" id="p7i-0e-kqF"/>
                         <outlet property="PER" destination="hN2-RN-b2s" id="hHa-yt-7fg"/>
-                        <outlet property="Per" destination="RE2-f3-Bf4" id="HfV-XR-nbS"/>
                         <outlet property="TextField" destination="lXT-QS-wS0" id="jHJ-3O-Q7N"/>
+                        <outlet property="金額" destination="RE2-f3-Bf4" id="45m-Dl-XOA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

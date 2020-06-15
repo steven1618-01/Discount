@@ -11,18 +11,31 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var TextField: UITextField!
-    @IBOutlet weak var Per: UILabel!
     @IBOutlet weak var Count: UILabel!
     @IBOutlet weak var PER: UILabel!
+    @IBOutlet weak var 金額: UILabel!
+    
     
     override func viewDidLoad() {
+        
+        
+        
+        //Count.text = dicount(money,persent)
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func after_entry_the_number(_ sender: Any) {
-        
+    @IBAction func persent_slider(_ sender: UISlider) {
+        PER.text = Int(sender.value).description
     }
     
+    @IBAction func money1(_ sender: Any) {
+        金額.text = TextField.text
+    }
+    
+    //Dicount function
+    func dicount (money : Int , persent : Int) -> Int {
+        return money * persent / 100
+    }
 }
