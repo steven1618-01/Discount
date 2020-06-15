@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var TextField: UITextField!
     @IBOutlet weak var Count: UILabel!
     @IBOutlet weak var PER: UILabel!
@@ -17,35 +17,36 @@ class ViewController: UIViewController {
     
     var money = 0
     var persent = 0
-    
+    //MARK: <viewDidLoad>
     override func viewDidLoad() {
-        
-        
-        
-        //Count.text = dicount(money,persent)
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
+    //MARK: IBAction
     @IBAction func persent_slider(_ sender: UISlider) {
+        sender.value.round()
         PER.text = Int(sender.value).description+"%"
-        var persent1 = Int(sender.value).description
+        let persent1 = Int(sender.value).description
         persent = 100-Int(persent1)!
         Count.text = String(dicount(money: money, persent: persent))
     }
     
     @IBAction func money1(_ sender: Any) {
         金額.text = TextField.text
-        var money1 = Int(TextField.text!)!
+        let money1 = Int(TextField.text!)!
         money = money1
         Count.text = String(dicount(money: money, persent: persent))
         
         
     }
     
-    //Dicount function
+    //MARK: Dicount function
     func dicount (money : Int , persent : Int) -> Int {
         return money * persent / 100
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }
